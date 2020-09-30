@@ -7,35 +7,47 @@ from matplotlib.colors import cnames
 
 def list_to_dict(some_list: list) -> dict:
     # TODO: Transformer la liste en dictionnaire, les éléments de la liste deviennent les clés et leur index deviennent les valeurs
-    return {}
+    
+    return {some_list[i]:i for i in range(len(some_list))}
 
 
 def color_name_to_hex(colors: list) -> list:
     # TODO: Trouver la valeur hex de chaque couleur dans la liste et créer une liste de tupple où le premier élément est le nom de la couleur et le deuxième est la valeur hex
+    #newDict = {"red":(255,0,0), "blue":(0,0,255), "green": (0,128,0)}
     return []
 
 
 def odd_integer_for_loop(end: int) -> list:
-    return []
+    liste = []
+    for i in range(1, end + 1, 2):
+        liste.append(i)
+    return liste
 
 
 def odd_integer_list_comprehension(end: int) -> list:
-    return []
+    return [2*k+1 for k in range(1, end, 2)]
 
 
 def loop_traversal(integers: list) -> None:
+    for i in range(len(integers)):
+        print(f"{integers[i]}, {i}")
     pass
 
 
-def word_dict_for_loop() -> dict:
-    return {}
+def word_dict_for_loop(words: list) -> dict:
+    newDict = {}
+    for i in range(len(words)):
+        newDict[words[i][0]] = words[i]
+    return newDict
 
 
-def word_dict_comprehension() -> dict:
-    return {}
+def word_dict_comprehension(words: list) -> dict:
+    return {words[i][0]: words[i] for i in range(len(words))}
 
 
 def dictionary_traversal(words: dict) -> None:
+    for i, valeur in words.items():
+        print(f"{i}, {valeur}")
     pass
 
 
@@ -64,7 +76,7 @@ def main() -> None:
 
     print(f"Les 2 dictionnaires sont-ils identiques? {words_for == words_comprehension}")
     print(f"Parcours d'un des 2 dictionnaires...")
-    loop_traversal(words_comprehension)
+    dictionary_traversal(words_comprehension)
 
 
 if __name__ == '__main__':
