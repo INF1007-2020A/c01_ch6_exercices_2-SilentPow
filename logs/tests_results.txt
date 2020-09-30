@@ -149,6 +149,6 @@ AssertionError: {'G': 'Given', 'a': 'a', 't': 'two', 'l': 'list', 'o': 'o[40 cha
  : Mauvaise reponse
 
 ----------------------------------------------------------------------
-Ran 6 tests in 0.006s
+Ran 6 tests in 0.004s
 
 FAILED (failures=4)
