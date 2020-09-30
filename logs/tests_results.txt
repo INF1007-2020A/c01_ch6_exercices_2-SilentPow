@@ -1,0 +1,154 @@
+test_color_name_to_hex (__main__.TestExercice) ... FAIL
+test_list_to_dict (__main__.TestExercice) ... ok
+test_odd_integer_for_loop (__main__.TestExercice) ... ok
+test_odd_integer_list_comprehension (__main__.TestExercice) ... FAIL
+test_word_dict_comprehension (__main__.TestExercice) ... FAIL
+test_word_dict_for_loop (__main__.TestExercice) ... FAIL
+
+======================================================================
+FAIL: test_color_name_to_hex (__main__.TestExercice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_exercice.py", line 39, in test_color_name_to_hex
+    'Mauvaise reponse'
+AssertionError: Lists differ: [[], []] != [[('blue', '#0000FF'), ('red', '#FF0000'), [172 chars]A')]]
+
+First differing element 0:
+[]
+[('blue', '#0000FF'), ('red', '#FF0000'), [83 chars]FF')]
+
+- [[], []]
++ [[('blue', '#0000FF'),
++   ('red', '#FF0000'),
++   ('green', '#008000'),
++   ('yellow', '#FFFF00'),
++   ('black', '#000000'),
++   ('white', '#FFFFFF')],
++  [('orange', '#FFA500'),
++   ('blue', '#0000FF'),
++   ('red', '#FF0000'),
++   ('brown', '#A52A2A')]] : Mauvaise reponse
+
+======================================================================
+FAIL: test_odd_integer_list_comprehension (__main__.TestExercice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_exercice.py", line 61, in test_odd_integer_list_comprehension
+    'Mauvaise reponse'
+AssertionError: Lists differ: [3, 7, 11, 15, 19, 23, 27, 31, 35, 39, 43, 47] != [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23]
+
+First differing element 0:
+3
+1
+
+- [3, 7, 11, 15, 19, 23, 27, 31, 35, 39, 43, 47]
++ [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23] : Mauvaise reponse
+
+======================================================================
+FAIL: test_word_dict_comprehension (__main__.TestExercice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_exercice.py", line 83, in test_word_dict_comprehension
+    'Mauvaise reponse'
+AssertionError: {'G': 'Given', 'a': 'a', 't': 'two', 'l': 'list', 'o': 'o[40 chars]ate'} != {'G': 'Given', 'A': 'a', 'T': 'two', 'L': 'list', 'O': 'o[40 chars]ate'}
+- {'G': 'Given',
+-  'a': 'a',
+? ^ ^
+
++ {'A': 'a',
+? ^ ^
+
+-  'c': 'create',
+?   ^
+
++  'C': 'create',
+?   ^
+
+-  'e': 'equal',
+?   ^
+
++  'E': 'equal',
+?   ^
+
++  'G': 'Given',
+-  'l': 'list',
+?   ^
+
++  'L': 'list',
+?   ^
+
+-  'o': 'of',
+?   ^
+
++  'O': 'of',
+?   ^
+
+-  's': 'size',
+?   ^
+
++  'S': 'size',
+?   ^
+
+-  't': 'two'}
+?   ^
+
++  'T': 'two'}
+?   ^
+ : Mauvaise reponse
+
+======================================================================
+FAIL: test_word_dict_for_loop (__main__.TestExercice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_exercice.py", line 72, in test_word_dict_for_loop
+    'Mauvaise reponse'
+AssertionError: {'G': 'Given', 'a': 'a', 't': 'two', 'l': 'list', 'o': 'o[40 chars]ate'} != {'G': 'Given', 'A': 'a', 'T': 'two', 'L': 'list', 'O': 'o[40 chars]ate'}
+- {'G': 'Given',
+-  'a': 'a',
+? ^ ^
+
++ {'A': 'a',
+? ^ ^
+
+-  'c': 'create',
+?   ^
+
++  'C': 'create',
+?   ^
+
+-  'e': 'equal',
+?   ^
+
++  'E': 'equal',
+?   ^
+
++  'G': 'Given',
+-  'l': 'list',
+?   ^
+
++  'L': 'list',
+?   ^
+
+-  'o': 'of',
+?   ^
+
++  'O': 'of',
+?   ^
+
+-  's': 'size',
+?   ^
+
++  'S': 'size',
+?   ^
+
+-  't': 'two'}
+?   ^
+
++  'T': 'two'}
+?   ^
+ : Mauvaise reponse
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.006s
+
+FAILED (failures=4)
